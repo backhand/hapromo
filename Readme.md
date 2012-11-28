@@ -1,6 +1,8 @@
 HAProxy monitor library
 =======================
 
+[![Build Status](https://secure.travis-ci.org/backhand/hapromo.png?branch=master)](https://travis-ci.org/backhand/hapromo)
+
 Usage:
 ------
 
