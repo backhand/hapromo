@@ -1,4 +1,4 @@
-var Hapromo    = require('./hapromo');
+var Hapromo    = require('hapromo');
 
 // Hapromo config
 var conf = {

@@ -6,7 +6,7 @@ Usage:
 
 require('hapromo');
 
-var hapromo = new Hapromo({  
+```var hapromo = new Hapromo({  
   user : 'username',  
   pass : 'password',  
   host : 'somehost.com',  
@@ -16,7 +16,11 @@ var hapromo = new Hapromo({
 
 hapromo.on(server_event, function(data) {  
 	// Handle event  
-});  
+});```  
+
+Installation:
+------------------------
+npm install hapromo
 
 List of built-in events:
 ------------------------
@@ -27,7 +31,7 @@ update
 
 Creating a custom filter with a handler function:
 -------------------------------------------------
-hapromo.addFilter({ criteria : [  
+```hapromo.addFilter({ criteria : [  
     { header : 'svname', op : 'ne', value : 'FRONTEND' },  
     { header : 'svname', op : 'ne', value : 'BACKEND' },  
     { header : 'scur', op : 'gt', value : function(data) { return 0.70 * data.slim; } }  
@@ -35,15 +39,15 @@ hapromo.addFilter({ criteria : [
     	console.log('High load on server %s!', data.svname);  
     	// Handle it  
 	}  
-});  
+});```  
 
 Same, but register as event instead:
 ------------------------------------
-hapromo.addFilter({ criteria : [  
+```hapromo.addFilter({ criteria : [  
     { header : 'svname', op : 'ne', value : 'FRONTEND' },  
     { header : 'svname', op : 'ne', value : 'BACKEND' },  
     { header : 'scur', op : 'gt', value : function(data) { return 0.70 * data.slim; } }  
   ], event : 'high_load'  
-});  
+});```  
 
 
